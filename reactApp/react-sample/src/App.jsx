@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import { ColoredMessage } from "./components/ColoredMessage";
+import { CssModule } from "./CssModule";
 
 export const App = () => {
     const onClickButton = () => {
@@ -16,6 +17,7 @@ export const App = () => {
     return (
         <div>
             <h1>こんにちは</h1>
+            <CssModule></CssModule>
             <ColoredMessage color="pink">お元気ですか？</ColoredMessage>
             <ColoredMessage color="blue">こんにちは</ColoredMessage>
             <button onClick={onClickButton}>ボタン</button>
