@@ -1,8 +1,15 @@
+import styled from "styled-components" 
+
 export const StyledComponents = () => {
     return (
-        <div className="container">
+        <Scontainer>
             <p className="title">StyledComponentsボタンです</p>
             <button className="button">ボタン</button>
-        </div>
+        </Scontainer>
     );
 };
+
+const Scontainer = styled.div`
+    border: solid 1px #aaa;
+    text-align: center;
+    `;
