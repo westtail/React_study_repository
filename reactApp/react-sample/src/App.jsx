@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState} from "react";
+import { memo } from 'react';
 import { useEffect } from "react";
 import { ColoredMessage } from "./components/ColoredMessage";
 import { CssModule } from "./CssModule";
@@ -9,7 +10,7 @@ import { TailWindCss } from "./TailWindCss";
 import { Child1} from "./components/Child1"
 import { Child4} from "./components/Child4"
 
-export const App = () => {
+export const App = memo(() => {
     const onClickButton = () => {
         setNum(num + 1)
     };
@@ -36,4 +37,4 @@ export const App = () => {
             <Child4></Child4>
         </div>
     );
-};
+});
