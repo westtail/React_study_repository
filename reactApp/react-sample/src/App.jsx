@@ -6,6 +6,9 @@ import { StyledJsx } from "./StyledJsx";
 import { StyledComponents } from "./StyledComponents";
 import { TailWindCss } from "./TailWindCss";
 
+import { Child1} from "./components/Child1"
+import { Child4} from "./components/Child4"
+
 export const App = () => {
     const onClickButton = () => {
         setNum(num + 1)
@@ -28,6 +31,9 @@ export const App = () => {
             <ColoredMessage color="blue">こんにちは</ColoredMessage>
             <button onClick={onClickButton}>ボタン</button>
             <p>{num}</p>
+            <h1>再レタリングの要素</h1>
+            <Child1></Child1>
+            <Child4></Child4>
         </div>
     );
 };
