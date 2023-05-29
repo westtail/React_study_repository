@@ -17,9 +17,13 @@ export const App = memo(() => {
 
     const [num, setNum] = useState(0);
 
-    useEffect(() => {
-        alert();
-    }, [num]);
+    const onClickReset = () => {
+        setNum(0);
+    }
+
+    //useEffect(() => {
+    //    alert();
+    //}, [num]);
 
     return (
         <div>
@@ -33,7 +37,7 @@ export const App = memo(() => {
             <button onClick={onClickButton}>ボタン</button>
             <p>{num}</p>
             <h1>再レタリングの要素</h1>
-            <Child1></Child1>
+            <Child1 onClickReset={onClickReset}></Child1>
             <Child4></Child4>
         </div>
     );
