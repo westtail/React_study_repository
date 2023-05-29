@@ -1,4 +1,4 @@
-import { useState} from "react";
+import { useCallback, useState} from "react";
 import { memo } from 'react';
 import { useEffect } from "react";
 import { ColoredMessage } from "./components/ColoredMessage";
@@ -17,9 +17,9 @@ export const App = memo(() => {
 
     const [num, setNum] = useState(0);
 
-    const onClickReset = () => {
+    const onClickReset = useCallback(() => {
         setNum(0);
-    }
+    },[])
 
     //useEffect(() => {
     //    alert();
