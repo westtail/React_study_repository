@@ -1,4 +1,4 @@
-import { useCallback, useState} from "react";
+import { useCallback, useContext, useState} from "react";
 import { memo } from 'react';
 import { useEffect } from "react";
 import { ColoredMessage } from "./components/ColoredMessage";
@@ -11,6 +11,7 @@ import { Child1} from "./components/Child1"
 import { Child4} from "./components/Child4"
 
 import { Card } from "./components/Card"
+import { AdminFlagContext } from "./components/providers/AdminFlagProvider";
 
 export const App = memo(() => {
     const onClickButton = () => {
@@ -23,8 +24,9 @@ export const App = memo(() => {
         setNum(0);
     },[])
 
-    const [ isAdmin, setIsAdmin] = useState(false);
-
+    //context内の値と更新関数を取得
+    const {isAdmin, setIsAdmin} = useContext(AdminFlagContext);
+    //切り替え時に更新関数を実行
     const onClickSwitch = () => setIsAdmin(!isAdmin)
 
     //useEffect(() => {
